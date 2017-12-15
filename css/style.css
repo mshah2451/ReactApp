@@ -1,0 +1,73 @@
+*{margin: 0; padding: 0;box-sizing: border-box;}
+.main{
+ background-color:tomato;
+ height: 300px;
+}
+.outer{
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+}
+.inner{
+    background:gray;
+    height: 100px;
+    position: relative;
+}
+.userimg{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    left: 40px;
+    top:-40px;
+    background-color: mediumseagreen;
+}
+.outerUserdetails{
+    width: 80%;
+    margin: 0 auto;
+}
+.innerUserDetails
+{
+    width: 23%;
+    height: 80px;
+    background: slateblue;
+    float: left;
+    margin:10px 1%;
+}
+.leftdive{
+width: 30%;
+float: left;
+
+
+}
+.rightdiv{
+    width: 69%;
+    float: right;
+    background:rebeccapurple;
+    height: 100px;
+}
+.bodydiv{
+    margin-top: 20px;
+}
+.about{
+    width: 90%;
+    background: rgb(66, 125, 235);
+    height: 80px;
+margin: 10px 1%;
+}
+.pdetail{
+    width: 90%;
+    background: blanchedalmond;
+    height: 80px;
+margin: 10px 1%;
+}
+.uldetaillst > li{
+    list-style: none;
+    padding:10px 5px;
+    border:1px solid #000;
+    border-radius: 5px;
+    border-top:0;
+}
+.uldetaillst > li:first-child{
+    border-top:1px solid #000;
+}

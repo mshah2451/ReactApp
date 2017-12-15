@@ -1,0 +1,19 @@
+.aboutEdit{
+    cursor:pointer;
+}
+
+.edit-btn-about{
+    -webkit-appearance: none;
+    border: 1px solid black;
+    background: white;
+    color: black;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.edit-btn-about:active,
+.edit-btn-about:visited,
+.edit-btn-about:hover{
+    background: white;
+    color: black;
+}
