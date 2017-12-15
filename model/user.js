@@ -13,5 +13,4 @@ const userSchema =
         emails:Array
     });
 
-
  mongoose.model("users",userSchema);
