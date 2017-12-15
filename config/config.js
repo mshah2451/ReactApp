@@ -1,6 +1,6 @@
 module.exports={
-    googleClientID:"679553659427s.apps.googleusercontent.com",
-    googleSecretcode:"F",
-    mongooseURL:"mongodb://.com:29066/loginapp",
+    googleClientID:"put here google client id",
+    googleSecretcode:"Google SecreatCode",
+    mongooseURL:"Mongoog connection string",
     cookieKey:"asdfsddafsdafsd"
 }
