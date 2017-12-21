@@ -6,7 +6,6 @@ import * as action from '../Action';
 class App extends Component {
     componentDidMount() {
    this.props.fetchUser();
-   
     }
     render() {
         return (

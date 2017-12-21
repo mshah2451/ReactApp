@@ -2,9 +2,10 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const keys = require('../config/config');
 const mongoose = require('mongoose');
+require('../model/userProfiledetail');
 require('../model/user');
 const User = mongoose.model('users');
-
+const Profiledetail = mongoose.model('Profiledetail');
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });
@@ -38,6 +39,13 @@ passport.use(
                     emails: profile.emails
                 }
             ).save();
+         
+            const Createdetail =  await new Profiledetail(
+                         {
+                             UserId:profile.id,
+                         }
+                     ).save();
+             
             done(null, users);
         })
 );

@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 class Master extends Component {
     RenderComponets() {
         if (this.props.auth) {
+           
             return (
                <div>
                     <Route exact path='/' component={Profile} />
@@ -17,8 +18,10 @@ class Master extends Component {
         }
         else {
             return (
-           
-                    <Route exact path='/' component={Landing} />
+                <div>
+                     <Route exact path='/' component={Landing} />
+                   
+                    </div>
           )
         }
     }

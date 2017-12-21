@@ -3,11 +3,9 @@ const mongoose = require('mongoose');
 const Profiledetail = mongoose.model('Profiledetail');
 module.exports = (app) => {
 
-    app.get('/api/Userdetail', async (req, res) => {
-        Profiledetail.findById(req.query.ID)
-        .then(
-            res.send(req.Profiledetail)   
-        )
+    app.get('/api/GetUserdetail',async(req, res) => {
+   const data= await Profiledetail.findOne({ UserId: req.query.ID },(err,doc)=>{return doc});
+     res.send(data);
     });
 
     app.put('/api/Userdetail', async (req, res) => {
@@ -16,6 +14,10 @@ module.exports = (app) => {
             doc.About = About;
             doc.save();
         });
-    });
-};
+        const data= await Profiledetail.findOne({ UserId:UserId },(err,doc)=>{return doc});
+        res.send(data);
+      //  res.send(update);
+      
+    }); 
+}
 

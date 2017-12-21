@@ -1,10 +1,18 @@
-import { connect } from 'react-redux'
 import React, { Component } from 'react';
-import * as action from '../../../Action';
-class About extends Component {
-    constructor(props) {
-        super(props)
-    
+import { connect } from 'react-redux';
+import * as action from '../../../../Action';
+class BtnEditUpdate extends Component {
+  constructor(props){
+      super();
+//       debugger
+// console.log(this.props)
+//   }
+// btnCall(value)
+// {
+//     debugger
+// console.log(value)
+// }
+
 this.dataChanged = this.dataChanged.bind(this);
 this.state = {
     message: '',
@@ -63,29 +71,16 @@ RenderValue(isEnble) {
     return this.props.update != null ? this.props.update.About : (false);
     // : 
 }
-    render() {
-        return (
-      
-                        <div className="card light-blue">
-                            <div className="card-content white-text">
-                                <span className="card-title">About Me!</span>
-                                <button className="edit-btn-about" onClick={(e) => { this.dataChanged(this.state.isEnble,e) }}>{this.state.btnEdit}</button>
-                                <p>
-                                    {this.RenderValue(this.state.isEnble)}
-                                </p>
-                                <div className="card-action white-text">
-                                </div>
-                            </div>
-                        </div>
-                   
-        )
-
-    }
-
-
+render() {
+    return (<div>{this.RenderValue()}
+    <span className="edit badge" onClick={() => { this.btnCall(this.props) }}>edit</span>
+    </div>
+)
+}
 }
 const mapStateToProps = state => ({
     user: state.auth,
     update: state.updateProfile
 })
-export default connect(mapStateToProps, action)(About);
+
+export default  connect(mapStateToProps, action)(BtnEditUpdate)
